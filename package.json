@@ -5,16 +5,10 @@
     "license": "MIT",
     "dependencies": {},
     "devDependencies": {
-	    "@rollup/plugin-node-resolve": "*",
-        "npm-run-all": "*",
-        "rollup": "*",
-        "serve": "*"
-	},
+        "live-server": "*"
+    },
     "scripts": {
-        "serve": "serve ./",
-        "build": "rollup -c template.rollup.config.js",
-        "watch": "rollup -w -c template.rollup.config.js",
-        "start": "npm-run-all --parallel serve watch",
+        "start": "live-server --open=/test/debug.html",
         "postversion": "npm publish --access public"
     },
     "main": "./source/main.js",
